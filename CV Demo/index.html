@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CV Template A4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- open .html file in browser; hit Ctrl + P to print; either save as .pdf or print;
+select the "Print Backgrounds" option to print the CSS-specified colors-->
+<!-- https://medium.com/@karthikricssion/how-to-design-a-printable-html-page-layout-802bc9ea61dd -->
+
+<body>
+
+    <div class="sheet-outer A4">
+
+        <section class="sheet padding-5mm">
+
+            <!-- column layout -->
+            <div id="parent_layout">
+
+                <!-- row 1 -->
+                <div class="banner_layout">
+                    <!-- profile photo -->
+                    <img id="profile_photo" src="/img/harold_wren.jpg" alt="Profile photo"/>
+
+                    <!-- name -->
+                    <div class="name_layout">
+                        <span id="first_name">ORESTIS</span>
+                        <span id="last_name">PAPADOPOULOS</span>
+                        <span id="folder_name">FOLDER 2-71: CURRICULUM VITAE</span>
+                    </div>
+
+                    <!-- qr code -->
+                    <img id="qr_code" src="/img/cv_quote_2.png" alt="QR code"/>
+
+                    <!-- dob -->
+                    <div class="dob_layout">
+                        <div id="day_layout">
+                            <span id="day">da9<b>:</b></span>
+                            <span id="day_value">24</span>
+                        </div>
+                        <div id="month_layout">
+                            <span id="month">m0nth<b>:</b></span>
+                            <span id="month_value">04</span>
+                        </div>
+                        <div id="year_layout">
+                            <span id="year">issu3d<b>:</b>&nbsp;</span>
+                            <span id="year_value">1999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="grid">
+
+                    <div class="grid_card" id="education_card_high_school">
+                        <div id="high_school_title_layout">
+                            <span><b>Marasleio, 26th Lyceum of Athens</b></span>
+                            <span id="high_school_period">2014 - 2017</span>
+                        </div>
+
+                        <div id="apolytirion_layout">
+                            <div id="apolytirion_grade_layout">
+                                <span>Apolytirion</span>
+                                <span id="apolytirion_grade">18.4</span>
+                            </div>
+                            <div id="apolytirion_grade_bar">
+
+                            </div>
+                        </div>
+
+                        <div id="pan_hellenic_exam_layout">
+                            <div id="pan_hellenic_exam_grade_layout">
+                                <span>Pan Hellenic exam</span>
+                                <span id="pan_hellenic_exam_grade">16618</span>
+                            </div>
+                            <div id="pan_hellenic_exam_grade_bar">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_card" id="education_card_uniwa">
+                        <div id="uniwa_title_layout">
+                            <span><b>University of West Attica</b></span>
+                            <span id="uniwa_period">2018 - 2019</span>
+                        </div>
+                        <span id="uniwa_attendance_period">Attended two semesters in mechanical engineering</span>
+                        <span>Notable courses: Statics, CAD, 3D modeling</span>
+                    </div>
+
+                    <div class="grid_card" id="education_card_deree">
+                        <div id="deree_title_layout">
+                            <span id="deree_title"><b>Deree, The American College of Greece</b></span>
+                            <span id="deree_period">2019 - 2023</span>
+                        </div>
+                        <span>BSc in IT: Software Development</span>
+                        <span><i>summa cum laude</i></span>
+                        <span>International Honors Program</span>
+<!--                        <span>Minor in Applied and Computational Mathematics</span>-->
+                    </div>
+
+                    <div class="grid_card" id="deree_awards_card">
+                        <table id="deree_table">
+                            <tr>
+                                <th scope="col" colspan="2">Deree Academic Awards</th>
+                                <th id="total">total</th>
+                            </tr>
+                            <tr>
+                                <td>'19 - '22</td>
+                                <td>Merit-based, need-based scholarships</td>
+                                <td>55%</td>
+                            </tr>
+                            <tr>
+                                <td>'20 - '22</td>
+                                <td>NESA scholarship</td>
+                                <td>100%</td>
+                            </tr>
+                            <tr>
+                                <td>'23</td>
+                                <td scope="col" colspan="3">Outstanding Graduating Student in IT</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="grid_card" id="deckhand_xp_and_fitness_card">
+                        <div id="deckhand_xp_and_fitness_layout">
+                            <table id="fitness_table">
+                                <tr>
+                                    <th scope="col" colspan="3">Fitness</th>
+                                </tr>
+                                <tr id="from_to_activity">
+                                    <td>from</td>
+                                    <td>to</td>
+                                    <td>activity</td>
+                                </tr>
+                                <tr>
+                                    <td>'04</td>
+                                    <td>'09</td>
+                                    <td>Swimming</td>
+                                </tr>
+                                <tr>
+                                    <td>'07</td>
+                                    <td>'17</td>
+                                    <td>Sailing</td>
+                                </tr>
+                                <tr>
+                                    <td>'11</td>
+                                    <td>Present</td>
+                                    <td>Weight training</td>
+                                </tr>
+<!--                                <tr>-->
+<!--                                    <td>'24</td>-->
+<!--                                    <td>Present</td>-->
+<!--                                    <td>Judo</td>-->
+<!--                                </tr>-->
+                            </table>
+                            <table id="deckhand_xp_table">
+                                <tr>
+                                    <th scope="col" colspan="4">Deckhand Experience</th>
+                                </tr>
+                                <tr id="from_to_yacht_name_length">
+                                    <td>from</td>
+                                    <td>to</td>
+                                    <td>yacht name</td>
+                                    <td>length [<span id="meters">m</span>]</td>
+                                </tr>
+                                <tr>
+                                    <td>May '19</td>
+                                    <td>Jun '21</td>
+                                    <td>M13</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>Jun '21</td>
+                                    <td>Sep '21</td>
+                                    <td>Katerina P.</td>
+                                    <td>33</td>
+                                </tr>
+                                <tr>
+                                    <td>May '23</td>
+                                    <td>Oct '23</td>
+                                    <td>Flor</td>
+                                    <td>28</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="grid_card" id="top_sailing_awards_card">
+                        <table id="top_sailing_awards_table">
+                            <tr>
+                                <th scope="col" colspan="2">Top Sailing Awards</th>
+                            </tr>
+                            <tr>
+                                <td id="year_2013" rowspan="4">2013</td>
+                                <td><span class="dot gold_dot"></span>&nbsp;&nbsp;Europa Cup Greece Laser 4.7</td>
+                            </tr>
+                            <tr>
+                                <td><span class="dot gold_dot"></span>&nbsp;&nbsp;Athens Eurolymp Week Laser 4.7</td>
+                            </tr>
+                            <tr>
+                                <td><span class="dot silver_dot"></span>&nbsp;&nbsp;National Championship Laser 4.7</td>
+                            </tr>
+                            <tr>
+                                <td><i>Honorary Award, Piraeus Sailing Club</i></td>
+                            </tr>
+                            <tr>
+                                <td id="year_2014" rowspan="3">2014</td>
+                                <td><span class="dot gold_dot"></span>&nbsp;&nbsp;Athens Eurolymp Week Laser 4.7</td>
+                            </tr>
+                            <tr>
+                                <td><span class="dot gold_dot"></span>&nbsp;&nbsp;National Championship Laser 4.7</td>
+                            </tr>
+                            <tr>
+                                <td><i>Honorary Award, Piraeus Sailing Club</i></td>
+                            </tr>
+                            <tr>
+                                <td id="year_2015" rowspan="2">2015</td>
+                                <td><span class="dot bronze_dot"></span>&nbsp;&nbsp;Balkan Championship Laser 4.7</td>
+                            </tr>
+                            <tr>
+                                <td><i>Honorary Award, Piraeus Sailing Club</i></td>
+                            </tr>
+                            <tr>
+                                <td id="year_2016" rowspan="2">2016</td>
+                                <td><span class="dot bronze_dot"></span>&nbsp;&nbsp;National Championship Laser Std.</td>
+                            </tr>
+                            <tr>
+                                <td><i>Honorary Award, Sailing Club SEANATK</i></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="grid_card" id="software_skills_card">
+                        <table id="software_skills_table">
+                            <tr>
+                                <th scope="col" colspan="2">Software Skills</th>
+                            </tr>
+                            <tr>
+                                <td id="frameworks">frameworks</td>
+                                <td>Android Studio, Vaadin, PyQt, Electron</td>
+                            </tr>
+                            <tr>
+                                <td id="ms_office">ms office</td>
+                                <td>Word, Excel, PowerPoint, Visio</td>
+                            </tr>
+                            <tr>
+                                <td id="languages">languages</td>
+                                <td>Java, Python, HTML, CSS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="grid_card" id="languages_card">
+                        <div id="languages_layout">
+                            <span><b>Languages</b></span>
+                        </div>
+
+                        <div id="greek_layout">
+                            <div id="greek_level_layout">
+                                <span>Greek</span>
+                                <span id="greek_level">Native speaker</span>
+                            </div>
+                            <div id="greek_level_bar">
+
+                            </div>
+                        </div>
+
+                        <div id="english_layout">
+                            <div id="english_level_layout">
+                                <span>English</span>
+                                <span id="english_level">Proficient</span>
+                            </div>
+                            <div id="english_level_bar">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_card" id="projects_card">
+                        <table id="projects_table">
+                            <tr>
+                                <th scope="col" colspan="3">Projects</th>
+                            </tr>
+                            <tr>
+                                <td class="project_number">1</td>
+                                <td>IT Capstone Project</td>
+                                <td>Credential manager with NFC authentication and login automation</td>
+                            </tr>
+                            <tr>
+                                <td class="project_number">2</td>
+                                <td>Honors Thesis</td>
+                                <td>Examining AGI in the context of neural nets and rule-based systems</td>
+                            </tr>
+                            <tr>
+                                <td class="project_number">3</td>
+                                <td>6-axis robot arm</td>
+                                <td>Robot arm mounted on remote-controlled Lego Mindstorms vehicle</td>
+                            </tr>
+                            <tr>
+                                <td class="project_number">4</td>
+                                <td>8-bit breadboard CPU</td>
+                                <td>A programmable computer made of logic gates designed by Ben Eater</td>
+                            </tr>
+                            <tr>
+                                <td class="project_number">5</td>
+                                <td>Bicycle tachometer</td>
+                                <td>Created using Arduino and a Hall effect sensor</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- row 3 -->
+                <div id="footer">
+
+                    <div id="contact_info_layout">
+                        <span id="address">📌 62 Sina Str. Athens Greece, 10672</span>
+                        <span id="phone_number">📞 (+30) 694 508 6298</span>
+                        <span id="email">🚩 orestis.p.pap@gmail.com</span>
+                    </div>
+                    <span id="navy_service">Military obligations fulfilled. Served at Hellenic Navy 2023-2024.</span>
+                    <span id="html_css_credit">&#x2014; &nbsp; Made with HTML and CSS &nbsp; &#x2014;</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

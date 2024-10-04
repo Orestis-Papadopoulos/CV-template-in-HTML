@@ -1,0 +1,385 @@
+
+* {
+    font-size: 14px;
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+}
+
+.sheet-outer {
+    margin: 0;
+}
+
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    page-break-after: always;
+}
+
+@media screen {
+    body {
+        background: #e0e0e0;
+    }
+
+    .sheet {
+        background: white;
+        box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+        margin: 5mm auto;
+    }
+}
+
+.sheet-outer.A4 .sheet {
+    width: 210mm;
+    height: 296mm
+}
+
+.sheet.padding-5mm {
+    padding: 5mm;
+}
+
+@page {
+    size: A4;
+    margin: 0
+}
+
+@media print {
+    .sheet-outer.A4, .sheet-outer.A5.landscape {
+        width: 210mm;
+    }
+}
+
+#parent_layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    height: 100%;
+}
+
+.banner_layout {
+    display: flex;
+    flex-direction: row;
+    column-gap: .4em;
+    padding: .4em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#profile_photo {
+    height: 100px;
+    width: 100px;
+}
+
+#qr_code {
+    height: 36px;
+    width: 36px;
+    margin-left: auto;
+}
+
+.name_layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#first_name {
+    font-size: 20px;
+    letter-spacing: .1em;
+    color: #5b5b5b;
+}
+
+#last_name {
+    font-size: 20px;
+    letter-spacing: .1em;
+    color: #5b5b5b;
+}
+
+#folder_name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ef9a13;
+    margin-top: auto;
+}
+
+.dob_layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#day_layout, #month_layout, #year_layout {
+    display: flex;
+}
+
+#year_layout {
+    margin-top: auto;
+}
+
+#day, #month, #year {
+    color: #5b5b5b;
+}
+
+#day_value, #month_value, #year_value {
+    color: #5b5b5b;
+    margin-left: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5em;
+}
+
+.grid_card {
+    display: flex;
+    column-gap: .6em;
+}
+
+th, td {
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid hsla(214, 53%, 23%, 0.16);
+    border-collapse: collapse;
+    padding: .2em .5em .2em .5em;
+}
+
+/* education cards */
+#education_card_high_school {
+    background-color: hsla(214, 61%, 25%, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: .6em;
+    row-gap: .6em;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#high_school_title_layout {
+    display: flex;
+    margin-bottom: .4em;
+}
+
+#high_school_period, #uniwa_period, #deree_period {
+    margin-left: auto;
+    color: hsla(214, 45%, 20%, 0.52);
+}
+
+#apolytirion_layout, #pan_hellenic_exam_layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: .1em;
+}
+
+#apolytirion_grade_layout, #pan_hellenic_exam_grade_layout {
+    display: flex;
+}
+
+#apolytirion_grade, #pan_hellenic_exam_grade {
+    margin-left: auto;
+}
+
+#apolytirion_grade_bar {
+    height: 5px;
+    background-color: hsla(214, 53%, 23%, 0.16);
+    background-image: linear-gradient(to right, #ef9a13 92%, rgba(0,0,0,0) 92%);
+}
+
+#pan_hellenic_exam_grade_bar {
+    height: 5px;
+    background-color: hsla(214, 53%, 23%, 0.16);
+    background-image: linear-gradient(to right, #ef9a13 83%, rgba(0,0,0,0) 83%);
+}
+
+#education_card_uniwa {
+    background-color: hsla(214, 61%, 25%, 0.05);
+    padding: .6em;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
+    row-gap: .2em;
+}
+
+#uniwa_title_layout {
+    display: flex;
+}
+
+#uniwa_attendance_period {
+    margin-top: auto;
+}
+
+#education_card_deree {
+    background-color: hsla(214, 61%, 25%, 0.05);
+    padding: .6em;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 2;
+    row-gap: .2em;
+}
+
+#deree_title_layout {
+    display: flex;
+}
+
+#deree_title {
+    margin-bottom: .8em;
+}
+
+#deree_logo_layout {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+#trophy_dots {
+    display: flex;
+    column-gap: .5em;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.gold_dot {
+    background-color: #FFD700;
+}
+
+.silver_dot {
+    background-color: #C0C0C0;
+}
+
+.bronze_dot {
+    background-color: #cd7f32;
+}
+
+#deree_awards_card {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#projects_card {
+    grid-column: 1 / span 2;
+}
+
+#deree_table, #deckhand_xp_and_fitness_layout, #deckhand_xp_table, #fitness_table, #software_skills_table, #projects_table {
+    width: 100%;
+}
+
+/* use descendant combinator for zebra table effect (not child combinator) */
+#projects_table tr:nth-child(even) {
+    background-color: hsla(214, 61%, 25%, 0.06);
+}
+
+#foo {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+#deckhand_xp_table {
+    margin-top: auto;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    row-gap: .4em;
+}
+
+#contact_info_layout, #html_css_credit, #navy_service {
+    display: flex;
+    justify-content: center;
+    column-gap: 2em;
+    color: #5b5b5b;
+    font-size: 10px;
+}
+
+#address, #phone_number, #email {
+    font-size: 12px;
+}
+
+#from_to_activity, #from_to_yacht_name_length, #frameworks, #ms_office, #languages {
+    font-variant: small-caps slashed-zero;
+    color: hsla(214, 45%, 20%, 0.52);
+}
+
+#meters {
+    font-variant: normal;
+}
+
+#total {
+    font-weight: normal;
+    font-variant: small-caps;
+    color: hsla(214, 45%, 20%, 0.52);
+}
+
+#top_sailing_awards_table {
+    width: 100%;
+}
+
+#deckhand_xp_and_fitness_layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#year_2013, #year_2014, #year_2015, #year_2016 {
+    vertical-align: top;
+    text-align: center;
+}
+
+#greek_flag, #usa_flag {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.project_number {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#languages_card {
+    background-color: hsla(214, 61%, 25%, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: .6em;
+    row-gap: .6em;
+}
+
+#greek_layout, #english_layout  {
+    display: flex;
+    flex-direction: column;
+    row-gap: .1em;
+}
+
+#greek_level_layout, #english_level_layout {
+    display: flex;
+}
+
+#greek_level, #english_level {
+    margin-left: auto;
+}
+
+#greek_level_bar {
+    height: 5px;
+    background-color: hsla(214, 53%, 23%, 0.16);
+    background-image: linear-gradient(to right, #ef9a13 100%, rgba(0,0,0,0) 100%);
+}
+
+#english_level_bar {
+    height: 5px;
+    background-color: hsla(214, 53%, 23%, 0.16);
+    background-image: linear-gradient(to right, #ef9a13 80%, rgba(0,0,0,0) 80%);
+}
+
+#languages_layout {
+    margin-bottom: .4em;
+}

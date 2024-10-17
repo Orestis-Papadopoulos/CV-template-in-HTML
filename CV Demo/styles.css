@@ -1,6 +1,6 @@
 
 * {
-    font-size: 14px;
+    font-size: 13px;
     font-family: Arial;
 }
 
@@ -43,7 +43,7 @@ body {
 
 @page {
     size: A4;
-    margin: 0
+    margin: 0;
 }
 
 @media print {
@@ -69,59 +69,50 @@ body {
 
 #profile_photo {
     height: 100px;
-    width: 100px;
 }
 
-#qr_code {
-    height: 36px;
-    width: 36px;
-    margin-left: auto;
-}
-
-.name_layout {
+#title_layout, #name_layout {
     display: flex;
     flex-direction: column;
 }
 
-#first_name {
-    font-size: 20px;
-    letter-spacing: .1em;
-    color: #5b5b5b;
+#name_layout {
+    height: 50%;
+    justify-content: space-evenly;
 }
 
-#last_name {
+#first_name, #last_name {
     font-size: 20px;
     letter-spacing: .1em;
     color: #5b5b5b;
 }
 
 #folder_name {
+    color: white;
+    background-color: #ef9a13;
+    padding: .05em .2em .05em .2em;
     font-size: 18px;
     font-weight: bold;
-    color: #ef9a13;
     margin-top: auto;
 }
 
-.dob_layout {
+#qr_code_layout {
+    display: flex;
+    column-gap: .4em;
+    height: 50%;
+    margin-left: auto;
+}
+
+#qr_code {
+    height: 50px;
+}
+
+#issued_layout {
     display: flex;
     flex-direction: column;
-}
-
-#day_layout, #month_layout, #year_layout {
-    display: flex;
-}
-
-#year_layout {
-    margin-top: auto;
-}
-
-#day, #month, #year {
+    justify-content: space-evenly;
     color: #5b5b5b;
-}
-
-#day_value, #month_value, #year_value {
-    color: #5b5b5b;
-    margin-left: auto;
+    /* align-items: end; */
 }
 
 .grid {
@@ -222,9 +213,6 @@ table, th, td {
 
 #deree_title_layout {
     display: flex;
-}
-
-#deree_title {
     margin-bottom: .8em;
 }
 
@@ -274,14 +262,6 @@ table, th, td {
 /* use descendant combinator for zebra table effect (not child combinator) */
 #projects_table tr:nth-child(even) {
     background-color: hsla(214, 61%, 25%, 0.06);
-}
-
-#foo {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    height: 100%;
-    width: 100%;
 }
 
 #deckhand_xp_table {
@@ -336,12 +316,7 @@ table, th, td {
     text-align: center;
 }
 
-#greek_flag, #usa_flag {
-    font-size: 30px;
-    vertical-align: middle;
-}
-
-.project_number {
+.centered_cell {
     vertical-align: middle;
     text-align: center;
 }
@@ -371,13 +346,13 @@ table, th, td {
 #greek_level_bar {
     height: 5px;
     background-color: hsla(214, 53%, 23%, 0.16);
-    background-image: linear-gradient(to right, #ef9a13 100%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(to right, #ef9a13 100%, transparent 100%);
 }
 
 #english_level_bar {
     height: 5px;
     background-color: hsla(214, 53%, 23%, 0.16);
-    background-image: linear-gradient(to right, #ef9a13 80%, rgba(0,0,0,0) 80%);
+    background-image: linear-gradient(to right, #ef9a13 80%, transparent 80%);
 }
 
 #languages_layout {

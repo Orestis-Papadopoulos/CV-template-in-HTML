@@ -10,8 +10,6 @@
 select the "Print Backgrounds" option to print the CSS-specified colors-->
 <!-- https://medium.com/@karthikricssion/how-to-design-a-printable-html-page-layout-802bc9ea61dd -->
 
-<!-- sample commit -->
-
 <body>
 
     <div class="sheet-outer A4">
@@ -24,33 +22,26 @@ select the "Print Backgrounds" option to print the CSS-specified colors-->
                 <!-- row 1 -->
                 <div class="banner_layout">
                     <!-- profile photo -->
-                    <img id="profile_photo" src="harold_wren.jpg" alt="Profile photo"/>
+                    <img id="profile_photo" src="/img/headshot.jpg" alt="Profile photo"/>
 
                     <!-- name -->
-                    <div class="name_layout">
-                        <span id="first_name">ORESTIS</span>
-                        <span id="last_name">PAPADOPOULOS</span>
-                        <span id="folder_name">FOLDER 2-71: CURRICULUM VITAE</span>
+                    <div id="title_layout">
+                        <div id="name_layout">
+                            <span id="first_name">ORESTIS</span>
+                            <span id="last_name">PAPADOPOULOS</span>
+                        </div>
+                        <span id="folder_name">FOLDER: CURRICULUM VITAE</span>
                     </div>
 
-                    <!-- qr code -->
-                    <img id="qr_code" src="/img/cv_link_qrcode.svg" alt="QR code"/>
-
-                    <!-- dob -->
-                    <div class="dob_layout">
-                        <div id="day_layout">
-                            <span id="day">da9<b>:</b></span>
-                            <span id="day_value">01</span>
-                        </div>
-                        <div id="month_layout">
-                            <span id="month">m0nth<b>:</b></span>
-                            <span id="month_value">01</span>
-                        </div>
-                        <div id="year_layout">
-                            <span id="year">issu3d<b>:</b>&nbsp;</span>
-                            <span id="year_value">1907</span>
+                    <div id="qr_code_layout">
+                        <img id="qr_code" src="/img/cv_link_qrcode.svg" alt="QR code"/>
+                        <div id="issued_layout">
+                            <span>Issued on Oct 17, 2024</span>
+                            <span>For official use</span>
+                            <span>Made w/ HTML and CSS</span>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- row 2 -->
@@ -94,7 +85,7 @@ select the "Print Backgrounds" option to print the CSS-specified colors-->
 
                     <div class="grid_card" id="education_card_deree">
                         <div id="deree_title_layout">
-                            <span id="deree_title"><b>Deree, The American College of Greece</b></span>
+                            <span><b>Deree, The American College of Greece</b></span>
                             <span id="deree_period">2019 - 2023</span>
                         </div>
                         <span>BSc in IT: Software Development</span>
@@ -130,27 +121,31 @@ select the "Print Backgrounds" option to print the CSS-specified colors-->
                         <div id="deckhand_xp_and_fitness_layout">
                             <table id="fitness_table">
                                 <tr>
-                                    <th scope="col" colspan="3">Fitness</th>
+                                    <th scope="col" colspan="4">Fitness</th>
                                 </tr>
                                 <tr id="from_to_activity">
                                     <td>from</td>
                                     <td>to</td>
                                     <td>activity</td>
+                                    <td>years</td>
                                 </tr>
                                 <tr>
                                     <td>'04</td>
                                     <td>'09</td>
                                     <td>Swimming</td>
+                                    <td>6</td>
                                 </tr>
                                 <tr>
                                     <td>'07</td>
                                     <td>'17</td>
                                     <td>Sailing</td>
+                                    <td>11</td>
                                 </tr>
                                 <tr>
                                     <td>'11</td>
                                     <td>Present</td>
                                     <td>Weight training</td>
+                                    <td>14</td>
                                 </tr>
 <!--                                <tr>-->
 <!--                                    <td>'24</td>-->
@@ -230,7 +225,7 @@ select the "Print Backgrounds" option to print the CSS-specified colors-->
                                 <td><span class="dot bronze_dot"></span>&nbsp;&nbsp;National Championship Laser Std.</td>
                             </tr>
                             <tr>
-                                <td><i>Honorary Award, Sailing Club SEANATK</i></td>
+                                <td><i>Honorary Award, Nautical Club SEANATK</i></td>
                             </tr>
                         </table>
                     </div>
@@ -287,27 +282,27 @@ select the "Print Backgrounds" option to print the CSS-specified colors-->
                                 <th scope="col" colspan="3">Projects</th>
                             </tr>
                             <tr>
-                                <td class="project_number">1</td>
+                                <td class="centered_cell">1</td>
                                 <td>IT Capstone Project</td>
                                 <td>Credential manager with NFC authentication and login automation</td>
                             </tr>
                             <tr>
-                                <td class="project_number">2</td>
+                                <td class="centered_cell">2</td>
                                 <td>Honors Thesis</td>
                                 <td>Examining AGI in the context of neural nets and rule-based systems</td>
                             </tr>
                             <tr>
-                                <td class="project_number">3</td>
+                                <td class="centered_cell">3</td>
                                 <td>6-axis robot arm</td>
                                 <td>Robot arm mounted on remote-controlled Lego Mindstorms vehicle</td>
                             </tr>
                             <tr>
-                                <td class="project_number">4</td>
+                                <td class="centered_cell">4</td>
                                 <td>8-bit breadboard CPU</td>
                                 <td>A programmable computer made of logic gates designed by Ben Eater</td>
                             </tr>
                             <tr>
-                                <td class="project_number">5</td>
+                                <td class="centered_cell">5</td>
                                 <td>Bicycle tachometer</td>
                                 <td>Created using Arduino and a Hall effect sensor</td>
                             </tr>
@@ -320,12 +315,11 @@ select the "Print Backgrounds" option to print the CSS-specified colors-->
                 <div id="footer">
 
                     <div id="contact_info_layout">
-                        <span id="address">📌 314 Address Str. Athens Greece, 10672</span>
+                        <span id="address">📌 314 First Str. Athens Greece, 12345</span>
                         <span id="phone_number">📞 (+30) 691 234 5678</span>
                         <span id="email">🚩 john.doe@gmail.com</span>
                     </div>
-                    <span id="navy_service">Military obligations fulfilled. Served at Hellenic Navy 2023-2024.</span>
-                    <span id="html_css_credit">&#x2014; &nbsp; Made with HTML and CSS &nbsp; &#x2014;</span>
+                    <span id="navy_service">Military obligations fulfilled. Served at Hellenic Navy 2023 - 2024.</span>
 
                 </div>
 

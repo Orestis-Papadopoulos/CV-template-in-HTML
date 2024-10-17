@@ -61,7 +61,6 @@ body {
 
 .banner_layout {
     display: flex;
-    flex-direction: row;
     column-gap: .4em;
     padding: .4em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -163,7 +162,7 @@ table, th, td {
     row-gap: .1em;
 }
 
-#apolytirion_grade_layout, #pan_hellenic_exam_grade_layout {
+#apolytirion_grade_layout, #pan_hellenic_exam_grade_layout, #uniwa_title_layout {
     display: flex;
 }
 
@@ -174,13 +173,13 @@ table, th, td {
 #apolytirion_grade_bar {
     height: 5px;
     background-color: hsla(214, 53%, 23%, 0.16);
-    background-image: linear-gradient(to right, #ef9a13 92%, rgba(0,0,0,0) 92%);
+    background-image: linear-gradient(to right, #ef9a13 92%, transparent 92%);
 }
 
 #pan_hellenic_exam_grade_bar {
     height: 5px;
     background-color: hsla(214, 53%, 23%, 0.16);
-    background-image: linear-gradient(to right, #ef9a13 83%, rgba(0,0,0,0) 83%);
+    background-image: linear-gradient(to right, #ef9a13 83%, transparent 83%);
 }
 
 #education_card_uniwa {
@@ -191,10 +190,6 @@ table, th, td {
     grid-column: 2;
     grid-row: 1;
     row-gap: .2em;
-}
-
-#uniwa_title_layout {
-    display: flex;
 }
 
 #uniwa_attendance_period {
